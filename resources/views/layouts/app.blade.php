@@ -66,7 +66,7 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" style="margin-top:0 ;" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
                             @if (Route::has('register'))
@@ -91,8 +91,8 @@
                             </li>
                         @endguest
                     </ul>
-                            <a href="#" class="search-switch"><span class="icon_search"></span></a>
-                            <a href="{{url('/')}}"><span class="icon_profile"></span></a>
+                            <a href="#"  class="search-switch"><span class="icon_search"></span></a>
+                            <!-- <a href="{{url('/')}}"><span class="icon_profile"></span></a> -->
                         </div>
                     </div>
                 </div>

@@ -70,8 +70,7 @@
         </div>
     </div>
 </div> -->
-<section class="normal-breadcrumb set-bg" style="margin-top: -16px;background: {{asset('assets/img/normal-breadcrumb.jpg')}}; overflow-x:hidden ;">
-        <div class="container">
+<section class="normal-breadcrumb set-bg" style="background:#222;">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="normal__breadcrumb__text">
@@ -94,7 +93,7 @@
                         <form action="{{ route('login') }}" method="POST">
                             @csrf
                                 <div class="input__item">
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <input placeholder="Email" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                         @error('email')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -103,7 +102,7 @@
                                     <span class="icon_mail"></span>
                                 </div>
                                 <div class="input__item">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input placeholder="Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -119,7 +118,7 @@
                 <div class="col-lg-6">
                     <div class="login__register">
                         <h3>Dont’t Have An Account?</h3>
-                        <a href="{{url('/')}}" class="primary-btn">Register Now</a>
+                        <a href="{{ route('register') }}" class="primary-btn">Register Now</a>
                     </div>
                 </div>
             </div>
