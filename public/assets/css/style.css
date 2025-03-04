@@ -34,9 +34,9 @@
 html,
 body {
 	height: 100%;
+	width: 100%;
 	font-family: "Mulish", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	background: #0b0c2a;
 }
 
 h1,
@@ -99,7 +99,7 @@ a:hover,
 a:focus {
 	text-decoration: none;
 	outline: none;
-	color: #ffffff;
+	color: #000000;
 }
 
 ul,
@@ -125,6 +125,7 @@ ol {
 	padding-left: 20px;
 	position: relative;
 	font-family: "Oswald", sans-serif;
+	background-color: #000;
 }
 
 .section-title h4:after,
@@ -159,7 +160,7 @@ ol {
 .text-white span,
 .text-white li,
 .text-white a {
-	color: #fff;
+	color: white;
 }
 
 /* buttons */
@@ -377,7 +378,7 @@ ol {
 	left: 0;
 	top: 82px;
 	width: 150px;
-	background: #ffffff;
+	background: white;
 	text-align: left;
 	padding: 5px 0;
 	z-index: 9;
@@ -704,7 +705,7 @@ ol {
 .product__item__text ul li {
 	list-style: none;
 	font-size: 10px;
-	color: #ffffff;
+	color: white;
 	font-weight: 700;
 	padding: 1px 10px;
 	background: rgba(255, 255, 255, 0.2);
@@ -713,13 +714,13 @@ ol {
 }
 
 .product__item__text h5 a {
-	color: #ffffff;
+	color: white;
 	font-weight: 700;
 	line-height: 26px;
 }
 
 .product__sidebar .section-title h5 {
-	color: #ffffff;
+	color: white;
 	font-weight: 600;
 	font-family: "Oswald", sans-serif;
 	line-height: 21px;
@@ -759,7 +760,7 @@ ol {
 }
 
 .product__sidebar__view .filter__controls li.active {
-	color: #ffffff;
+	color: white;
 }
 
 .product__sidebar__view .filter__controls li:last-child {
@@ -775,7 +776,7 @@ ol {
 
 .product__sidebar__view__item .ep {
 	font-size: 13px;
-	color: #ffffff;
+	color: white;
 	background: #e53637;
 	display: inline-block;
 	padding: 2px 12px;
@@ -806,7 +807,7 @@ ol {
 }
 
 .product__sidebar__view__item h5 a {
-	color: #ffffff;
+	color: white;
 	font-weight: 700;
 	line-height: 26px;
 }
@@ -849,7 +850,7 @@ ol {
 }
 
 .product__sidebar__comment__item__text h5 a {
-	color: #ffffff;
+	color: white;
 	font-weight: 700;
 	line-height: 26px;
 }
