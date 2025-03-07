@@ -24,7 +24,7 @@
     <div class="container">
         <div class="hero__slider owl-carousel">
             @foreach ($shows as $show)
-                <div class="hero__items set-bg" data-setbg="{{ asset('assets/' . $show->image) }}">
+                <div class="hero__items set-bg" data-setbg="{{ asset('assets/'. $show->image) }}">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="hero__text">
@@ -84,20 +84,20 @@
                         </div>
                     </div>
                     <div class="row">
-                        @foreach ($trendingShows as $trendingShow)
+                        @foreach ($trendingShows as $Show)
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/' . $trendingShow->image) }}">
-                                        <!-- <div class="ep">{{ $trendingShow->duration }}</div>
+                                    <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/' . $Show->image) }}">
+                                        <!-- <div class="ep">{{ $Show->duration }}</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div> -->
                                     </div>
                                     <div class="product__item__text">
                                         <ul>
-                                            <li>{{ $trendingShow->status }}</li>
-                                            <li>{{ $trendingShow->type }}</li>
+                                            <li>{{ $Show->status }}</li>
+                                            <li>{{ $Show->type }}</li>
                                         </ul>
-                                        <h5><a href="{{route('anime.details', $trendingShow->id)}}">{{ $trendingShow->name }}</a></h5>
+                                        <h5><a href="{{route('anime.details', $Show->id)}}">{{ $Show->name }}</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -113,20 +113,20 @@
                         </div>
                     </div>
                     <div class="row">
-                        @foreach ($trendingShows as $trendingShow)
+                        @foreach ($adventureShows as $show)
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/.$trendingShow->image.') }}">
+                                    <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/'. $show->image) }}">
                                         <!-- <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div> -->
                                     </div>
                                     <div class="product__item__text">
                                         <ul>
-                                            <li>{{$trendingShow->status }}</li>
-                                            <li>{{$trendingShow->type }}</li>
+                                            <li>{{$show->status}}</li>
+                                            <li>{{$show->type}}</li>
                                         </ul>
-                                        <h5><a href="{{route('anime.details', $trendingShow->id)}}">{{$trendingShow->name }}</a></h5>
+                                        <h5><a href="{{route('anime.details', $show->id)}}">{{$show->name}}</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -147,10 +147,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        @foreach ($trendingShows as $trendingShow)
+                        @foreach ($comedyShows as $show)
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/.$trendingShow->image.') }}">
+                                    <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/'. $show->image) }}">
                                         <!-- <div class="ep">18 / 18</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div> -->
@@ -160,7 +160,7 @@
                                             <li>Active</li>
                                             <li>Movie</li>
                                         </ul>
-                                        <h5><a href="{{route('anime.details', $trendingShow->id)}}">Great Teacher Onizuka</a></h5>
+                                        <h5><a href="{{route('anime.details', $show->id)}}">Great Teacher Onizuka</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -181,102 +181,24 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/img/live/live-1.jpg') }}">
-                                    <div class="ep">18 / 18</div>
-                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                </div>
-                                <div class="product__item__text">
-                                    <ul>
-                                        <li>Active</li>
-                                        <li>Movie</li>
-                                    </ul>
-                                    <h5><a href="{{route('anime.details', $trendingShow->id)}}">Shouwa Genroku Rakugo Shinjuu</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/img/live/live-2.jpg') }}">
-                                    <div class="ep">18 / 18</div>
-                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                </div>
-                                <div class="product__item__text">
-                                    <ul>
-                                        <li>Active</li>
-                                        <li>Movie</li>
-                                    </ul>
-                                    <h5><a href="{{route('anime.details', $trendingShow->id)}}">Mushishi Zoku Shou 2nd Season</a></h5>
+                        @foreach($actionShows as $show)
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/'. $show->image) }}">
+                                        <!-- <div class="ep">18 / 18</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 9141</div> -->
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Active</li>
+                                            <li>Movie</li>
+                                        </ul>
+                                        <h5><a href="{{route('anime.details', $show->id)}}">Shouwa Genroku Rakugo Shinjuu</a></h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/img/live/live-3.jpg') }}">
-                                    <div class="ep">18 / 18</div>
-                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                </div>
-                                <div class="product__item__text">
-                                    <ul>
-                                        <li>Active</li>
-                                        <li>Movie</li>
-                                    </ul>
-                                    <h5><a href="{{route('anime.details', $trendingShow->id)}}">Mushishi Zoku Shou: Suzu no Shizuku</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/img/live/live-4.jpg') }}">
-                                    <div class="ep">18 / 18</div>
-                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                </div>
-                                <div class="product__item__text">
-                                    <ul>
-                                        <li>Active</li>
-                                        <li>Movie</li>
-                                    </ul>
-                                    <h5><a href="{{route('anime.details', $trendingShow->id)}}">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/img/live/live-5.jpg') }}">
-                                    <div class="ep">18 / 18</div>
-                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                </div>
-                                <div class="product__item__text">
-                                    <ul>
-                                        <li>Active</li>
-                                        <li>Movie</li>
-                                    </ul>
-                                    <h5><a href="{{route('anime.details', $trendingShow->id)}}">Fate/stay night Movie: Heaven's Feel - II. Lost</a></h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/img/live/live-6.jpg') }}">
-                                    <div class="ep">18 / 18</div>
-                                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                </div>
-                                <div class="product__item__text">
-                                    <ul>
-                                        <li>Active</li>
-                                        <li>Movie</li>
-                                    </ul>
-                                    <h5><a href="{{route('anime.details', $trendingShow->id)}}">Kizumonogatari II: Nekketsu-hen</a></h5>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -289,58 +211,21 @@
                         <div class="section-title">
                             <h5>For You</h5>
                         </div>
-                        <div class="product__sidebar__comment__item">
-                            <div class="product__sidebar__comment__item__pic">
-                                <img src="{{ asset('assets/img/sidebar/comment-1.jpg') }}" alt="">
+                        @foreach($foruShows as $show)
+                            <div class="product__sidebar__comment__item">
+                                <div class="product__sidebar__comment__item__pic">
+                                    <img src="{{ asset('assets/'. $show->image) }}" alt="">
+                                </div>
+                                <div class="product__sidebar__comment__item__text">
+                                    <ul>
+                                        <li>Active</li>
+                                        <li>Movie</li>
+                                    </ul>
+                                    <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                    <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
+                                </div>
                             </div>
-                            <div class="product__sidebar__comment__item__text">
-                                <ul>
-                                    <li>Active</li>
-                                    <li>Movie</li>
-                                </ul>
-                                <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
-                                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-                            </div>
-                        </div>
-                        <div class="product__sidebar__comment__item">
-                            <div class="product__sidebar__comment__item__pic">
-                                <img src="{{ asset('assets/img/sidebar/comment-2.jpg') }}" alt="">
-                            </div>
-                            <div class="product__sidebar__comment__item__text">
-                                <ul>
-                                    <li>Active</li>
-                                    <li>Movie</li>
-                                </ul>
-                                <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
-                                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-                            </div>
-                        </div>
-                        <div class="product__sidebar__comment__item">
-                            <div class="product__sidebar__comment__item__pic">
-                                <img src="{{ asset('assets/img/sidebar/comment-3.jpg') }}" alt="">
-                            </div>
-                            <div class="product__sidebar__comment__item__text">
-                                <ul>
-                                    <li>Active</li>
-                                    <li>Movie</li>
-                                </ul>
-                                <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
-                                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-                            </div>
-                        </div>
-                        <div class="product__sidebar__comment__item">
-                            <div class="product__sidebar__comment__item__pic">
-                                <img src="{{ asset('assets/img/sidebar/comment-4.jpg') }}" alt="">
-                            </div>
-                            <div class="product__sidebar__comment__item__text">
-                                <ul>
-                                    <li>Active</li>
-                                    <li>Movie</li>
-                                </ul>
-                                <h5><a href="#">Monogatari Series: Second Season</a></h5>
-                                <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
