@@ -1,25 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- Commented-out original dashboard section -->
-<!-- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
 <section class="hero" style="margin-top: -68px; background: black; overflow: hidden;">
     <div class="container">
         <div class="hero__slider owl-carousel">
@@ -37,31 +18,6 @@
                     </div>
                 </div>
             @endforeach
-            <!-- Commented-out static hero items -->
-            <!-- <div class="hero__items set-bg" data-setbg="{{ asset('assets/img/hero/hero-1.jpg') }}">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="hero__text">
-                            <div class="label">Adventure</div>
-                            <a href="anime-details.html"><h2>Fate / Stay Night: Unlimited Blade Works</h2></a>
-                            <p>After 30 days of travel across the world...</p>
-                            <a href="#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__items set-bg" data-setbg="{{ asset('assets/img/hero/hero-1.jpg') }}">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="hero__text">
-                            <div class="label">Adventure</div>
-                            <h2>Fate / Stay Night: Unlimited Blade Works</h2>
-                            <p>After 30 days of travel across the world...</p>
-                            <a href="#"><span>Watch Now</span> <i class="fa fa-angle-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </section>
@@ -84,20 +40,20 @@
                         </div>
                     </div>
                     <div class="row">
-                        @foreach ($trendingShows as $Show)
+                        @foreach ($trendingShows as $show)
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/' . $Show->image) }}">
-                                        <!-- <div class="ep">{{ $Show->duration }}</div>
+                                    <div class="product__item__pic set-bg" data-setbg="{{ asset('assets/' . $show->image) }}">
+                                        <!-- <div class="ep">{{ $show->duration }}</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                                         <div class="view"><i class="fa fa-eye"></i> 9141</div> -->
                                     </div>
                                     <div class="product__item__text">
                                         <ul>
-                                            <li>{{ $Show->status }}</li>
-                                            <li>{{ $Show->type }}</li>
+                                            <li>{{ $show->status }}</li>
+                                            <li>{{ $show->type }}</li>
                                         </ul>
-                                        <h5><a href="{{route('anime.details', $Show->id)}}">{{ $Show->name }}</a></h5>
+                                        <h5><a href="{{route('anime.details', $show->id)}}">{{ $show->name }}</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +116,7 @@
                                             <li>Active</li>
                                             <li>Movie</li>
                                         </ul>
-                                        <h5><a href="{{route('anime.details', $show->id)}}">Great Teacher Onizuka</a></h5>
+                                        <h5><a href="{{route('anime.details', $show->id)}}">{{$show->name}}</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +150,7 @@
                                             <li>Active</li>
                                             <li>Movie</li>
                                         </ul>
-                                        <h5><a href="{{route('anime.details', $show->id)}}">Shouwa Genroku Rakugo Shinjuu</a></h5>
+                                        <h5><a href="{{route('anime.details', $show->id)}}">{{$show->name}}</a></h5>
                                     </div>
                                 </div>
                             </div>
@@ -213,15 +169,15 @@
                         </div>
                         @foreach($foruShows as $show)
                             <div class="product__sidebar__comment__item">
-                                <div class="product__sidebar__comment__item__pic">
-                                    <img src="{{ asset('assets/'. $show->image) }}" alt="">
+                                <div  class="product__sidebar__comment__item__pic">
+                                    <img src="{{ asset('assets/'. $show->image) }}" alt="imge of the anime {{$show->name}}">
                                 </div>
                                 <div class="product__sidebar__comment__item__text">
                                     <ul>
-                                        <li>Active</li>
-                                        <li>Movie</li>
+                                        <li>{{$show->status}}</li>
+                                        <li>{{$show->type}}</li>
                                     </ul>
-                                    <h5><a href="#">The Seven Deadly Sins: Wrath of the Gods</a></h5>
+                                    <h5><a href="#">{{$show->name}}</a></h5>
                                     <span><i class="fa fa-eye"></i> 19.141 Viewes</span>
                                 </div>
                             </div>

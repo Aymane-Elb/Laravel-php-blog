@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Trending Amazon products</title>
+        <title>Anime</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -29,35 +29,6 @@
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
         <div id="app">
         <header class="header">
-        <!-- <header class="w-full lg:max-w-4xl max-w-[335px] text-sm mb-6 not-has-[nav]:hidden">
-            @if (Route::has('login'))
-                <nav class="flex items-center justify-end gap-4">
-                    @auth
-                        <a
-                            href="{{ url('/dashboard') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal"
-                        >
-                            Dashboard
-                        </a>
-                    @else
-                        <a
-                            href="{{ route('login') }}"
-                            class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] text-[#1b1b18] border border-transparent hover:border-[#19140035] dark:hover:border-[#3E3E3A] rounded-sm text-sm leading-normal"
-                        >
-                            Log in
-                        </a>
-
-                        @if (Route::has('register'))
-                            <a
-                                href="{{ route('register') }}"
-                                class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                                Register
-                            </a>
-                        @endif
-                    @endauth
-                </nav> 
-            @endif
-        </header>  -->
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2">
@@ -67,12 +38,12 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-8">
+                    <!-- <div class="col-lg-8">
                         <div class="header__nav">
                             <nav class="header__menu mobile-menu">
                                 <ul>
-                                    <li class="active"><a href="./index.html">Homepage</a></li>
-                                    <li><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
+                                    <li style="text-decoration: none;" class="active"><a href="{{route('home')}}">Home</a></li>
+                                    <li ><a href="./categories.html">Categories <span class="arrow_carrot-down"></span></a>
                                         <ul class="dropdown">
                                             <li><a href="./categories.html">Romance</a></li>
                                             <li><a href="./categories.html">Adventure</a></li>
@@ -83,13 +54,13 @@
                                 </ul>
                             </nav>
                         </div>
-                    </div>
-                    <div class="col-lg-2">
+                    </div> -->
+                    <!-- <div class="col-lg-2">
                         <div class="header__right">
                             <a href="#" class="search-switch"><span class="icon_search"></span></a>
                             <a href="./login.html"><span class="icon_profile"></span></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div id="mobile-menu-wrap"></div>
             </div>
@@ -145,6 +116,353 @@
 
         <main class="py-4">
             @yield('content')
+        <div id="main-wrapper">
+            <div id="mw-top">
+                <div class="container">
+                    <div class="mwt-content">
+                        <div class="mwh-logo">
+                            <div class="clearfix"></div>
+                        </div>
+                        <div id="xsearch" class="home-search">
+                            <div class="search-content">
+                                <form action="/search" autocomplete="off" id="search-form">
+                                    <div class="search-submit">
+                                        <div class="search-icon btn-search"><i class="fa fa-search"></i></div>
+                                    </div>
+                                    <input type="text" class="form-control search-input" name="keyword"
+                                        placeholder="Enter anime name...">
+                                </form>
+                            </div>
+                            <div class="description text-center mb-3">anime.to - Just a better place to watch anime online
+                                for free!
+                            </div>
+                            <div class="show-share">
+                                <div class="sharethis-inline-share-buttons"></div>
+                            </div>
+                            <div class="mw-buttons text-center">
+                                <div class="block mb-2"><a target="_blank" href="https://twitter.com/animevc"
+                                                        class="btn btn-highlight"><i class="fab fa-twitter"></i>
+                                        Connect with us on twitter</a></div>
+                                <button style="background-color: white; color: #222;"><a href="{{route('home')}}" class="btn btn-lg btn-focus more-padding">Go to home
+                                        page</a></button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mw-text">
+            <div class="container">
+                
+                    <p>anime is a free anime website where millions visit to watch anime online.</p>
+                    <p>anime provides users with various genres including Action, Comedy, Demons, Drama, Historical,
+                        Romance, Samurai, School, Shoujo Ai, Shounen Supernatural, etc. This is the perfect place to
+                        expand the imagination of children under 12 years old as well as spread beautiful images of
+                        friendship, family, teammates, magic, etc. anime is committed to keeping you updated with the
+                        latest releases and providing excellent streaming capabilities for the best experience
+                        possible.</p>
+                    <h2 class="mt-h-medium">Watch Anime Online Free</h2>
+                    <p>It all started in 2016 when we officially launched the system of file sharing. We boast HD
+                        quality as well as fast download speed. To provide our users with multiple choices, we use links
+                        from third party sources like mp4upload, vidstream, streamtape, mycloud. Your Favorite Anime is
+                        available for live streaming and can reach a huge number of audiences around the world. The
+                        demand for Japanese anime has steadily been on the rise recently all over the world. When anime
+                        was shut down for the first time, multiple fake copies that are prone to viruses and malware
+                        came into existence. For your utmost safety, visit our official anime website only.</p>
+<!--                    <div style="margin-bottom: 20px; margin-top: 15px;">-->
+<!--                        <div id="bg-ssp-10384">-->
+<!--                            <script data-cfasync="false">-->
+<!--                              var bg_id_10384 = document.getElementById('bg-ssp-10384');-->
+<!--                              bg_id_10384.id = 'bg-ssp-10384-' + Math.floor(Math.random() * Date.now());-->
+<!--                              window.pubbidgeartag = window.pubbidgeartag || [];-->
+<!--                              window.pubbidgeartag.push({zoneid: 10384, id: bg_id_10384.id, wu: window.location.href})-->
+<!--                            </script>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                    <h2 class="mt-h-medium">What is wrong with anime?</h2>
+                    <p>Not everyone knows that anime is not only short animation. Thanks to the widespread promotion of
+                        Japanese newspapers and television, more and more people from four corners of the Earth know
+                        about this Japanese art subject. In its home country, Japan, 33% of people watch anime (out of
+                        125 million, that's more than 40 million). Most great anime series are based on well-known
+                        comics (manga), games, or ranobe. anime hosts a huge collection of anime with topics suitable
+                        for all ages and genders. No matter what genre you are in the mood for, you can find it here on
+                        anime.</p>
+                    <h2 class="mt-h-medium">Is KissAnime better than anime?</h2>
+                    <p>The fact that anime is new doesn't make it less competitive. The anime team has learnt from
+                        KissAnime's mistakes to create a site with better quality content library and much more
+                        outstanding updates than KissAnime. Titles you cannot find on anime are highly unlikely to be
+                        found anywhere else. anime is the easiest and fastest place to connect you with your titles of
+                        interest.</p>
+                    <h2 class="mt-h-medium">Is it illegal to use 9 anime?</h2>
+                    <p>Streaming anime on anime is not considered illegal in the US. To be exact, watching only anime
+                        and copyrighted shows is not technically illegal at this time. According to copyright attorneys,
+                        only when you download or share files, will you be subject to criminal or civil charges.
+                        Therefore, you are recommended to watch anime free online to avoid any possible issues.</p>
+                    <h2 class="mt-h-medium">Is anime safe?</h2>
+                    <p>We haven't received any report regarding the site's security. However, for your utmost safety,
+                        you should take precautionary measures such as a VPN to stay anonymous, anti-virus program and
+                        AdBlock extension to avoid ads and popups.</p>
+                    <h2 class="mt-h-medium">Is anime down?</h2>
+                    <p>To know if anime is down or having problems, you can check the uptime of the site via <a
+                                href="https://downforeveryoneorjustme.com/" target="_blank">https://downforeveryoneorjustme.com/</a>
+                        , or pay a visit to our social channels.</p>
+                    <h2 class="mt-h-medium">What's the new website of anime? Which anime is real?</h2>
+                    <p>animetv.to is currently the only official website of anime so please be aware of fake sites.
+                        The
+                        original anime.to (anime to official) was filled with ads and that's why we built the new
+                        anime website to make it better. Names are easy to fake, but they cannot compete with the
+                        superb features that animeto and anime.vc provide. Here are some of the features that will
+                        help you differentiate the real anime from the clone ones. Stay with us for a real fabulous
+                        watching experience!</p>
+                    <ul>
+                        <li><strong>Excellent quality anime:</strong> Your favorite anime deserves the best site to
+                            watch it on. Don't settle for low-quality sites when you can watch anime free on anime in
+                            HD quality with no buffering and lagging. We also provide subbed and dubbed versions for
+                            your utmost convenience. Give our videos a look and you will realize your watching
+                            experience on anime is as different as chalk and cheese from that of clone sites.
+                        </li>
+                        <li><strong>No app installation needed:</strong> Why waste time and device memory to download an
+                            app when your user experience on the anime is as smooth as butter? anime is mobile
+                            friendly and Chromecast supported so you can watch free anime on any device, at any time, as
+                            long as the Internet is available. All you need to do is to visit anime, search for your
+                            title of choice, and start your anime journey immediately.
+                        </li>
+                        <li><strong>Free anime streaming:</strong> Funimation, Crunchyroll, etc., can make a dent in
+                            your bank account. Instead of spending money on a new manga, new dresses, or weekly food,
+                            you have to pay to watch anime there. But with anime, fun is endless and free. Free
+                            entertainment is the best type of entertainment after all.
+                        </li>
+                        <li><strong>Streaming experience:</strong> Compared to other anime streaming sites, the loading
+                            speed at Zoro.to is faster. Downloading is just as easy as streaming, you won't have any
+                            problem saving the videos to watch offline later.
+                        </li>
+                        <li><strong>Watch unlimited anime online:</strong> There are no limits when it comes to watch
+                            free anime on anime. All the titles are available to access by free users. Our team is
+                            committed to providing you with the best content library possible. Should you not find your
+                            title of interest, simply send us a request and we will have it updated as soon as possible
+                            (if it is available somewhere on the Internet).
+                        </li>
+                    </ul>
+                    <h2 class="mt-h-medium">Is there a anime app?</h2>
+                    <p>Currently there s no app version of anime, we do not have any ios anime app or anime android
+                        apk. Please be careful with app claims to be official anime.</p>
+                    <h2 class="mt-h-medium">anime is blocked by my ISP, how to get anime unblocked?</h2>
+                    <p>We would recommend you to use a VPS to by-pass the blocking from your ISP. And please follow
+                        anime social pages to receive updates on our latest proxy sites. Here you can find list of our
+                        social account profile:
+                    </p>
+                    <ul>
+                        <li>anime twitter : https://twitter.com/animevc</li>
+                        <li>anime reddit : Coming soon</li>
+                    </ul>
+                    <h2 class="mt-h-medium">Is anime no ads guaranteed?</h2>
+                    <p>Yes, as you can see the official animetv.to website currently comes with no Ads.</p>
+                    <h2 class="mt-h-medium">Best alternative to anime</h2>
+                    <p>Although we are confident to provide you with the best overall experience, it is
+                        only wise to have more options in case bad things happen. Some other reliable
+                        and safe free anime sites you can bookmark include gogoanime, Zoro.to, and
+                        anime heaven.</p>
+                
+                <p>&nbsp;</p>
+                <div class="block text-center"><a href="/home" class="btn btn-lg btn-focus more-padding btn-home">Go to
+                        home page</a></div>
+            </div>
+        </div>
+    </div>
+    <!--End: Main-->
+    <!--Begin: Footer-->
+        <div id="footer">
+            <div class="container">
+                <div class="footer-icon"><img src="/images/footer-icon.png" alt="anime"></div>
+                <div class="footer-toggle-block">
+                    <div class="toggle-footer">
+                        <div class="tf-item">
+                            <div class="toggle-onoff size-s off select-anime-name"><span></span></div>
+                            <div class="name">EN/JP</div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="footer-az">
+                    <div class="block mb-2">
+                        <span class="ftaz">A-Z LIST</span><span
+                                class="size-s">Searching anime order by alphabet name A to Z.</span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="footer-content">
+                    <div class="footer-copyright float-left">
+                        <a href="/" class="footer-logo">
+                            <img src="/images/logo.png" alt="9anime">
+                        </a>
+                        <div class="copyright">Copyright © <a style="color: #aaa;" href="/">9anime</a>. All Rights Reserved
+                        </div>
+                        <div class="socials-group">
+                            <div class="scg-list">
+                                <div class="item"><a target="_blank" href="https://twitter.com/9Animevc"
+                                                    class="sc-social-button dc-btn"><i class="fab fa-twitter"></i></a></div>
+                                <div class="item"><a href="#" class="sc-social-button tl-btn"><i
+                                                class="fab fa-telegram-plane"></i></a></div>
+                                <div class="item"><a href="#" class="sc-social-button rd-btn"><i
+                                                class="fab fa-reddit-alien"></i></a></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="disclaimer small">Disclaimer: This site does not store any files on its server. All contents
+                            are provided by non-affiliated third parties.
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="footer-links float-left">
+                        <ul class="ulclear">
+                            <li class="title">Help</li>
+                            <li><a href="/contact" title="Contact">Contact</a></li>
+                            <li><a href="/faq" title="FAQ">FAQ</a></li>
+                            <li><a href="/app-download" title="9anime App">9anime App</a></li>
+                        </ul>
+                        <ul class="ulclear">
+                            <li class="title">Links</li>
+                            <li><a href="/az-list" title="A-Z List">A-Z List</a></li>
+                            <li><a href="/upcoming" title="Upcoming">Upcoming</a></li>
+                            <li><a href="/most-popular" title="Most Popular">Most Popular</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    <!--End: Footer-->
+    </div>
+<div class="modal fade premodal premodal-login" id="modallogin" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="tab-content">
+                <!--Begin: tab login-->
+                <div id="modal-tab-login" class="tab-pane active">
+                    <div class="modal-login-icon"><img src="/images/icon-login2.png"></div>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Member Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="description">9anime - a better place to watch anime online for free!</div>
+                        <div class="alert alert-danger" id="login-error" style="display: none;"></div>
+                        <form class="loginform" id="login-form" method="post">
+                            <div class="form-group w-icon">
+                                <input type="text" class="form-control" id="email" placeholder="Your Email" name="email" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group w-icon">
+                                <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-check custom-control custom-checkbox">
+                                <div class="float-left">
+                                    <input type="checkbox" class="custom-control-input" id="remember">
+                                    <label class="custom-control-label" for="remember">Remember me</label>
+                                </div>
+                                <div class="float-right">
+                                    <a href="javascript:;" class="link-highlight text-forgot forgot-tab-link">Forgot password?</a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group login-btn mb-0">
+                                <button id="btn-login" class="btn btn-primary btn-block btn-form">Login</button>
+                                <div class="loading-relative" id="login-loading" style="display: none;">
+                                    <div class="loading">
+                                        <div class="span1"></div>
+                                        <div class="span2"></div>
+                                        <div class="span3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer text-center">
+                        Don't have an account? <a class="link-highlight register-tab-link">Register</a>
+                    </div>
+                </div>
+                <!--End: tab login-->
+                <!--Begin: tab forgot-->
+                <div id="modal-tab-forgot" class="tab-pane fade">
+                    <div class="modal-login-icon"><img src="/images/icon-forgot.png"></div>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Reset Password</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="description">We will send an email to your box, just follow that link to set your new password.</div>
+                        <form class="loginform" id="forgot-form" method="post">
+                            <div class="form-group w-icon">
+                                <input type="text" class="form-control" id="forgot-email" placeholder="Your username or email">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group login-btn mb-0">
+                                <a href="#" class="btn btn-primary btn-block btn-form">Reset</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <a class="link-highlight login-tab-link">Back to Sign-in</a>
+                    </div>
+                </div>
+                <!--End: tab forgot-->
+                <!--Begin: tab register-->
+                <div id="modal-tab-register" class="tab-pane fade">
+                    <div class="modal-login-icon"><img src="/images/icon-register.png"></div>
+                    <div class="modal-header">
+                        <h5 class="modal-title">Register</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="description">When becoming members of the site, you could use the full range of functions.</div>
+                        <div class="alert alert-danger" id="register-error" style="display: none;"></div>
+                        <form class="loginform" method="post" id="register-form">
+                            <div class="form-group w-icon">
+                                <input type="text" class="form-control" id="re-username" placeholder="Your Name" name="name" required>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group w-icon">
+                                <input type="text" class="form-control" id="re-email" placeholder="Email" name="email" required>
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group w-icon">
+                                <input type="password" class="form-control" id="re-password" placeholder="Your password" name="password" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-group w-icon">
+                                <input type="password" class="form-control" id="re-confirmpassword" placeholder="Repeat your password" required>
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="form-group login-btn mb-0">
+                                <button id="btn-register" class="btn btn-primary btn-block btn-form">Register</button>
+                                <div class="loading-relative" id="register-loading" style="display: none;">
+                                    <div class="loading">
+                                        <div class="span1"></div>
+                                        <div class="span2"></div>
+                                        <div class="span3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer text-center">
+                        Have an account? <a class="link-highlight login-tab-link">Sign-in</a>
+                    </div>
+                </div>
+                <!--End: tab register-->
+            </div>
+        </div>
+    </div>
+</div>
         </main>
     </div>
         <!-- <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
