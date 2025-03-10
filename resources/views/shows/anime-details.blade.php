@@ -14,6 +14,13 @@
             </div>
         </div>
     </div>
+    <div class="container" >
+                    @if (session('follow'))
+                        <div class="alert alert-success">
+                            {{ session('follow') }}
+                        </div>
+                    @endif
+    </div>
     <section class="anime-details spad">
         <div class="container">
             <div class="anime__details__content">
@@ -53,10 +60,17 @@
                                 </div>
                             </div>
                             <div class="anime__details__btn">
-                                <a href="#" class="follow-btn"><i class="fa fa-heart-o"></i> Follow</a>
-                                <a href="anime-watching.html" class="watch-btn"><span>Watch Now</span> <i
-                                    class="fa fa-angle-right"></i></a>
-                                </div>
+                                @if ($validateFollowing >0)
+                                    <button  disabeld class="follow-btn">you have Followed this anime</button>
+                                @else
+                                    <form method="POST" action="{{ route('anime.follow' , $show->id) }}">
+                                            @csrf
+                                            <button  type="submit" class="follow-btn"><i class="fa fa-heart-o"></i>Follow</button>
+                                    </form>
+                                @endif
+
+                                    <a href="anime-watching.html" class="watch-btn"><span>Watch Now</span> <i
+                                            class="fa fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
